@@ -1,2 +1,13 @@
-# hyprland-rice1
-technically my first rice that i've just been iterating on over and over and over and here we are
+# ava's rice thing
+uhhh what do i put here
+
+it hyprland rice
+
+---
+### Tools
+* WM: Hyprland
+* Bar: Waybar
+* Launcher: rofi
+* Shell: zsh
+* Terminal: kitty
+* System Monitor: btop
