@@ -1,0 +1,97 @@
+// -*- mode: jsonc -*-
+{
+	"position": "top",
+	"height": 5,
+	"width": 1910,
+	"spacing": 10,
+	"margin": "5px 0 0 0",
+	"modules-left": [
+        "hyprland/workspaces",
+	"cpu",
+	"temperature",
+	"memory"
+	],
+	"modules-center": [
+		"clock"
+	],
+	"modules-right": [
+        	"pulseaudio",
+		"backlight",
+        	"battery",
+		"tray"
+	],
+
+//modules left
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"urgent": "[!]",
+			"active": "[]",
+			"default": "[]",
+			"empty": "]["
+		}
+	},
+	"cpu": {
+		"format": "{usage}% CPU",
+		"tooltip": false
+	},
+	"temperature": {
+		"critical-threshold": 95,
+		"format-critical": "{temperatureC}°C HOT",
+		"format": "{temperatureC}°C"
+	},
+	"memory": {
+		"format": "{used}GB MEM"
+	},
+
+
+//modules center aka literally just the clock
+	"clock": {
+		"timezone": "America/Arizona",
+		"format": "{:%I:%M:%S %p | %Y-%m-%d}",
+        	"tooltip-format": "<tt>{calendar}</tt>",
+		"interval": 1,
+		"calendar": {
+			"mode"          : "year",
+			"on-click-right": "mode",  //switches between year calendar and month calendar
+        		"mode-mon-col"  : 3,
+        		"weeks-pos"     : "right",
+			"on-scroll"     : 1,
+			"format": {
+				"months":     "<span color='#1B96A5'>{}</span>",
+				"days":       "<span color='#CCCCCC'>{}</span>",
+				"weeks":      "<span color='#1B96A5'>W{}</span>",
+				"weekdays":   "<span color='#D95449'>{}</span>",
+				"today":      "<span color='#1B96A5'><b>{}</b></span>"
+			}
+                }
+	},
+
+
+//modules right
+	"backlight": {
+		"format": "{percent}% BRT",
+		"smooth-scrolling-threshold": 1
+	},
+	"battery": {
+		"states": {
+			"warning": 30,
+			"critical": 15
+        	},
+		"interval": 30,
+        	"format": "{capacity}% BAT",
+		"format-charging": "{capacity}% AC"
+	},
+	"pulseaudio": {
+		"scroll-step": 2,
+		"format": "{volume}% VOL",
+		"format-bluetooth": "{volume}% BLT",
+		"format-bluetooth-muted": "MUTE BLT",
+		"format-muted": "MUTE",
+		"on-click": "pavucontrol"
+	},
+   	"tray": {
+		"show-passive-items": true,
+		"spacing": 10
+	}
+}

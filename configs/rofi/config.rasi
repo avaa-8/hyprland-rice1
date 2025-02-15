@@ -1,0 +1,31 @@
+// i am very very sorry about this file in particular being so fucked i just kept editing values that sounded like they worked until i got results and cba to trial and error it to a clean state
+
+configuration {
+	modes: "window,run,drun,ssh";
+	location: 6;
+	xoffset: 0;
+	yoffset: 0;
+}
+@theme "Monokai"
+* {
+	border-radius: 5px;
+	font:"Jetbrains Mono 12";
+	bordercolor: #1B96A5;
+	background-color: #030F10;
+	foreground: #1B96A5;
+	separatorcolor: #1B96A5;
+	lightfg: #1B96A5;
+	text-color: #1B96A5;
+	alternate-normal-background: #030F10;
+	urgent-background: #030F10;
+	selected-normal-background: #030F10;
+	alternate-urgent-background: #030F10;
+}
+window {
+	children: [listview, message, inputbar];
+	border: 1;
+	padding: 0;
+	margin: 5px;
+
+	}
+
